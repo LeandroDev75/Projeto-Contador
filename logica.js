@@ -24,4 +24,40 @@ const numero = parseFloat(document.getElementById('value').value);
 
 */
 
-const pegaCampoInput = document.getElementById("value");
+/*let pegaCampoInput = document.getElementById("value").value;
+
+if (pegaCampoInput !== isNaN) {
+
+    alert("Digite somente números!")
+} */
+
+function decrementar() {
+
+    let campoInput = document.getElementById("value");
+    let converteValorInputnumero = +campoInput.value;
+
+    if (isNaN(converteValorInputnumero)) {
+
+        alert("Digite somente números!");
+        return;
+    }
+
+   campoInput.value = converteValorInputnumero - 1;
+
+}
+
+function incrementar() {
+
+let campoInput1 = document.getElementById("value");
+let converteString_Numero = +campoInput1.value;
+
+if (isNaN(converteString_Numero)) {
+
+    alert("Digite somente números!")
+
+    return,;
+}
+
+campoInput1.value = ++converteString_Numero; // Usando o incremento ++
+
+}
