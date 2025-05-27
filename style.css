@@ -13,6 +13,7 @@ body {
     background-color: rgb(0, 255, 255);
     text-align: center;
     font-size: 60px;
+    border-radius: 10px;
 }
 
 #value::placeholder {
@@ -27,6 +28,7 @@ body {
 width: 8vh;
 height: 8vh;
 margin-right: 15px;
+border-radius: 10px;
 
 }
 
@@ -34,7 +36,8 @@ margin-right: 15px;
 
 width: 8vh;
 height: 8vh;
-margin-left: 15px;    
+margin-left: 15px;  
+border-radius: 10px;  
 
 }
 
