@@ -24,6 +24,7 @@ const numero = parseFloat(document.getElementById('value').value);
 
 */
 
+
 const escalaTemperatura = [
   '#3a4cc0', '#3c4fc3', '#4054c7', '#4258ca', '#465dcf', '#4860d1', '#4c66d6', '#4e69d8', '#526edc', '#5673e0',
   '#5876e2', '#5c7be5', '#5f7ee7', '#6383ea', '#6586ec', '#698bef', '#6c8ef1', '#7093f3', '#7497f5', '#779af6',
@@ -37,29 +38,48 @@ const escalaTemperatura = [
   '#d65243', '#d34d40', '#cf463d', '#cc3f39', '#c93b37', '#c53233', '#c22d31', '#be232d', '#bb1a2b', '#b60d28', '#b30326'
 ];
 
-// -50 -- indice 0
-// -49 -- indice 1
-// 50 -- indice 101
+const valorMinimo = -50;
+const valormaximo = 50;
 
-
-// indice da cor = (temperatura digitada - comprimento do array) - 1;
+function mudaBackGround() {
 
 let campoInput3 = document.getElementById("value");
-campoInput3.value = -50;
+let valorDeCampoInput3 = campoInput3.value;
+let converteNumber = Number(valorDeCampoInput3);
 
-let converteNumber = Number(campoInput3);
+let indiceCores = [];
 
-console.log(converteNumber);
+for (let i = valorMinimo; i <= converteNumber; i++) {  
+    
+ indiceCores.push(i);
 
-let corTemperatura = (converteNumber) + escalaTemperatura.length;
+ let inputCampo1 = document.querySelector("body")
+    inputCampo1.style.background = escalaTemperatura[indiceCores.length];
+   
+}
+}
 
-    console.log(corTemperatura);
 
-    let inputCampo1 = document.querySelector("body")
-    inputCampo1.style.background = escalaTemperatura[10];
+function mudaCor() {
 
-    let corValoEscolhido = escalaTemperatura[1];
+let campoInput3 = document.getElementById("value");
+let valorDeCampoInput3 = campoInput3.value;
+let converteNumber = Number(valorDeCampoInput3);
 
+let indiceCores = [];
+
+for (let i = valorMinimo; i <= converteNumber; i++) {  
+    
+ indiceCores.push(i);
+
+ let inputCampo1 = document.querySelector("body")
+    inputCampo1.style.background = escalaTemperatura[indiceCores.length];
+   
+}
+
+
+
+}
 
 
 
@@ -75,6 +95,7 @@ function decrementar() {
     }
 
    campoInput.value = converteValorInputnumero - 1;
+   mudaCor();
 
 }
 
@@ -92,4 +113,9 @@ if (isNaN(converteString_Numero)) {
 
 campoInput1.value = ++converteString_Numero; // Usando o incremento ++
 
+
+mudaCor();
+
 }
+
+
